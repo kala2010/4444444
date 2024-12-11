@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ku">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قوتابخانةى قةلاى ئيواران</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>قوتابخانةى قةلاى ئيواران</h1>
+            <h2>سیستەمی ئامادةبوون، ئامادة نةبوون، مولةت</h2>
+        </header>
+
+        <!-- اختيار الصفوف -->
+        <section id="class-selection">
+            <h3>هەڵبژاردنی قوتابخانەکان</h3>
+            <div id="class-buttons"></div>
+        </section>
+
+        <!-- اختيار الأشهر -->
+        <section id="month-selection" style="display: none;">
+            <h3>هەڵبژاردنی مانگ</h3>
+            <div id="month-buttons"></div>
+            <button onclick="backToClasses()" class="back-button">گەڕاندنەوە بۆ دەستنیشانی قوتابخانەکان</button>
+        </section>
+
+        <!-- اختيار الأيام -->
+        <section id="day-selection" style="display: none;">
+            <h3>هەڵبژاردنی ڕۆژ</h3>
+            <div id="day-buttons"></div>
+            <button onclick="backToMonths()" class="back-button">گەڕاندنەوە بۆ مانگەکان</button>
+        </section>
+
+        <!-- قائمة الطلاب -->
+        <section id="student-list" style="display: none;">
+            <h3 id="class-day-name"></h3>
+            <div id="students"></div>
+            <button onclick="backToDays()" class="back-button">گەڕاندنەوە بۆ ڕۆژەکان</button>
+            <button onclick="saveData()" class="save-button">پاشەکەوت کردن</button>
+        </section>
+    </div>
+
+    <script src="scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.1/xlsx.full.min.js"></script>
+</body>
+</html>
